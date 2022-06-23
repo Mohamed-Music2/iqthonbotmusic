@@ -37,15 +37,15 @@ async def cbstart(_, query: CallbackQuery):
                 ],
                 [
                     InlineKeyboardButton(
-                        "‹قناة السورس›", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "‹قناة السورس›", url=f"https://t.me/D_o_m_A12}"
                     ),
                     InlineKeyboardButton(
-                        "‹قناة البوت›", url=f"https://t.me/EITHON1"
+                        "‹قناة البوت›", url=f"https://t.me/SOHAGI_CH"
                     ),
                 ],
                 [
                     InlineKeyboardButton(
-                        "‹💰 شراء نسخة مدفوعة›", url="https://t.me/TTTLL0"
+                        "‹جروب الدعم 2›", url="https://t.me/doda_Yad"
                     )
                 ],
             ]
@@ -171,7 +171,7 @@ async def cbmenu(_, query: CallbackQuery):
         return await query.answer("انت مستخدم مجهول !\n\n» لاتستطيع استخدام البوت.")
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
     if not a.can_manage_voice_chats:
-        return await query.answer("💡وخر ايدك المشرف الوحيد الذي لديه صلاحية إدارة الدردشات الصوتية يمكنه النقر على هذا الزر !", show_alert=True)
+        return await query.answer("💡بعد ايدك المشرف الوحيد الذي لديه صلاحية إدارة الدردشات الصوتية يمكنه النقر على هذا الزر !", show_alert=True)
     chat_id = query.message.chat.id
     if chat_id in QUEUE:
           await query.edit_message_text(
@@ -190,12 +190,12 @@ async def cbmenu(_, query: CallbackQuery):
              ),
          )
     else:
-        await query.answer("❌ ماكو شي مشتغل يمعود؟", show_alert=True)
+        await query.answer("❌ لا يوجد اغنيه شغاله", show_alert=True)
 
 
 @Client.on_callback_query(filters.regex("cls"))
 async def close(_, query: CallbackQuery):
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
     if not a.can_manage_voice_chats:
-        return await query.answer("💡 وخر ايدك المشرف الوحيد الذي لديه صلاحية إدارة الدردشات الصوتية يمكنه النقر على هذا الزر !", show_alert=True)
+        return await query.answer("💡 بعد ايدك المشرف الوحيد الذي لديه صلاحية إدارة الدردشات الصوتية يمكنه النقر على هذا الزر !", show_alert=True)
     await query.message.delete()
